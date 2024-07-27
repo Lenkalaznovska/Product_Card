@@ -1,0 +1,62 @@
+/* Overlay that covers the rest of the page and displays the cart in the top right corner */
+.cart-overlay {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+  background: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  z-index: 1001;
+}
+
+/* Container for displaying cart content */
+.cart-container {
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+/* Button to close the cart */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Styling for the list of items in the cart */
+.cart-item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for individual items in the cart */
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Styling for the item image in the cart */
+.cart-item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* Container for item information in the cart */
+.cart-item-info {
+  flex: 1;
+}

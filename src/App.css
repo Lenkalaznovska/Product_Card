@@ -1,0 +1,202 @@
+/* General styling for the entire body */
+body {
+  background-color: var(--background-gray);
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Styling for the product card */
+.product-card {
+  max-width: 425px; /* Adjusted width for a balanced card size */
+  margin: 0 auto;
+  background-color: var(--product-white);
+  padding: 10px; /* Adjusted padding */
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Container for product images */
+.product-image-container {
+  position: relative;
+  width: 100%;
+  height: 225px; /* Adjusted height */
+  overflow: hidden;
+  transition: height 1s ease;
+}
+
+/* Styling for the image slider */
+.slider {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+/* Styling for individual slides */
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Controls for the slider */
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+/* Styling for slider controls (previous and next) */
+.controls .prev,
+.controls .next {
+  cursor: pointer;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+/* Styling for controls on hover */
+.controls .prev:hover,
+.controls .next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Styling for discount badges */
+.discount-badge {
+  background-color: var(--product-red);
+  color: var(--product-white);
+  font-weight: bold;
+  font-size: 20px; /* Adjusted font size */
+  display: inline-block;
+  border-radius: 50%;
+  height: 55px; /* Adjusted height */
+  width: 55px; /* Adjusted width */
+  line-height: 55px; /* Adjusted line-height */
+  text-align: center;
+  animation: pulse 1s infinite alternate;
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Container for product information */
+.product-info-container {
+  text-align: center;
+  margin-bottom: 10px; /* Adjusted margin */
+}
+
+/* Container for product details (e.g., free shipping) */
+.product-details-container {
+  padding: 8px; /* Adjusted padding */
+  background-color: var(--product-light-red);
+  margin-bottom: 14px; /* Adjusted margin */
+  border-radius: 6px;
+}
+
+/* Styling for product description */
+.product-description {
+  margin-bottom: 12px;
+  margin-top: 0;
+  text-align: justify;
+  font-size: 15px; /* Adjusted font size */
+}
+
+/* Styling for product title */
+.product-title {
+  font-size: 21px; /* Adjusted font size */
+  line-height: 1.4;
+  margin-bottom: 12px; /* Adjusted margin */
+}
+
+/* Container for product price and discount price */
+.product-price-container,
+.product-discount-price-container {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px; /* Adjusted margin */
+}
+
+/* Styling for product price before discount */
+.product-price {
+  color: var(--product-gray);
+  text-decoration: line-through;
+}
+
+/* Styling for product price after discount */
+.product-discount-price {
+  color: var(--product-red);
+}
+
+/* Styling for labels (e.g., free shipping, availability) */
+.product-shipping-label,
+.product-stock-label {
+  color: var(--product-red);
+  font-size: 15px; /* Adjusted font size */
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  padding: 8px; /* Adjusted padding */
+  margin: 6px; /* Adjusted margin */
+  border: 1px solid var(--product-green);
+  background-color: var(--product-white);
+  border-radius: 6px;
+}
+
+/* Styling for availability label */
+.product-stock-label {
+  position: relative;
+  font-weight: bold;
+}
+
+/* Styling for add to cart button */
+.add-to-cart-button {
+  background-color: var(--product-red);
+  color: var(--product-white);
+  font-weight: bold;
+  font-size: 17px; /* Adjusted font size */
+  display: block;
+  margin-top: 14px; /* Adjusted margin-top */
+  padding: 8px 0; /* Adjusted padding */
+  width: 100%;
+  text-align: center;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+/* Styling for add to cart button on hover */
+.add-to-cart-button:hover {
+  background-color: rgba(238, 18, 18, 0.8);
+}
+
+/* Styling for add to cart button on click */
+.add-to-cart-button:active {
+  transform: scale(0.95);
+}
+
+/* Styling for cart icon in the top right corner */
+.cart-icon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Styling for the image inside the cart icon */
+.cart-icon img {
+  width: 30px;
+  height: 30px;
+}
